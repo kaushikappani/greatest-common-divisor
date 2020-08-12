@@ -54,3 +54,16 @@ def gcd4(a,b):
             continue;
     print(mrcf)
 gcd4(6,14)
+
+
+#Euclid algorithm
+
+def gcd5(a,b):
+    if a<b:
+        a,b=b,a;
+        if a%b==0:
+            return b;
+    else:
+        diff=a-b;
+        return(gcd5(max(b,diff),min(b,diff)))
+gcd5(6,14)
